@@ -26,7 +26,6 @@ Para comprobar la contrasena compare el hash guardado con el calculado usando cr
 
 Texto claro es el dato que se puede leer directamente, el hash sirve para comprobar una contrasena sin recuperarla y el cifrado permite recuperar un dato usando una clave, por eso no son lo mismo
 
-Evidencia, [01-credenciales.md](evidencias/01-credenciales.md)
 
 ## 3 Proteccion de datos sensibles
 
@@ -38,7 +37,6 @@ Use el RFC porque es un dato que puede identificar al cliente y que puede necesi
 
 El nombre sigue visible y la tabla clientes sigue igual, solo cifre el RFC del ejemplo en la tabla nueva
 
-Evidencia, [02-cifrado-datos.md](evidencias/02-cifrado-datos.md)
 
 ## 4 TLS
 
@@ -72,7 +70,6 @@ Los modos no son iguales, disable no usa TLS, prefer intenta usarlo pero permite
 
 TLS protege la informacion mientras viaja, no cambia los permisos de los usuarios ni cifra por si solo los datos que estan guardados
 
-Evidencia, [04-tls.md](evidencias/04-tls.md)
 
 ## 5 Gestion de claves
 
@@ -82,7 +79,6 @@ Una clave real no debe quedar junto con los scripts ni en el historial del repos
 
 En un caso real se debe usar un gestor de secretos, limitar quien tiene acceso y tener un procedimiento para cambiar las claves o recuperarlas cuando sea necesario
 
-Evidencias, [03-gestion-claves.md](evidencias/03-gestion-claves.md) y [10-politica-claves.md](evidencias/10-politica-claves.md)
 
 ## 6 Resultados
 
@@ -102,7 +98,6 @@ Evidencias, [03-gestion-claves.md](evidencias/03-gestion-claves.md) y [10-politi
 
 Tambien compare que mecanismo corresponde a cada dato, revise el escenario de la empresa y propuse ocho reglas para cuidar las claves
 
-Evidencias, [07-comparacion.md](evidencias/07-comparacion.md) y [08-analisis-escenario.md](evidencias/08-analisis-escenario.md)
 
 ### Revision antes del commit
 
