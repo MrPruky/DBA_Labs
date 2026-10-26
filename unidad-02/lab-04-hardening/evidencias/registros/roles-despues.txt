@@ -1,0 +1,35 @@
+RESET
+           rolname           | rolsuper | rolinherit | rolcreaterole | rolcreatedb | rolcanlogin 
+-----------------------------+----------+------------+---------------+-------------+-------------
+ analista                    | f        | t          | f             | f           | f
+ estudiante                  | t        | t          | t             | t           | t
+ pg_checkpoint               | f        | t          | f             | f           | f
+ pg_create_subscription      | f        | t          | f             | f           | f
+ pg_database_owner           | f        | t          | f             | f           | f
+ pg_execute_server_program   | f        | t          | f             | f           | f
+ pg_maintain                 | f        | t          | f             | f           | f
+ pg_monitor                  | f        | t          | f             | f           | f
+ pg_read_all_data            | f        | t          | f             | f           | f
+ pg_read_all_settings        | f        | t          | f             | f           | f
+ pg_read_all_stats           | f        | t          | f             | f           | f
+ pg_read_server_files        | f        | t          | f             | f           | f
+ pg_signal_backend           | f        | t          | f             | f           | f
+ pg_stat_scan_tables         | f        | t          | f             | f           | f
+ pg_use_reserved_connections | f        | t          | f             | f           | f
+ pg_write_all_data           | f        | t          | f             | f           | f
+ pg_write_server_files       | f        | t          | f             | f           | f
+ soporte                     | f        | t          | f             | f           | f
+(18 rows)
+
+ grantee  | table_schema |      table_name      | privilege_type 
+----------+--------------+----------------------+----------------
+ analista | analitica    | clientes             | SELECT
+ analista | public       | v_analitica_clientes | SELECT
+ soporte  | public       | v_clientes_soporte   | SELECT
+(3 rows)
+
+ analista_ve_original | analista_ve_vista | soporte_ve_original | soporte_ve_vista 
+----------------------+-------------------+---------------------+------------------
+ f                    | t                 | f                   | t
+(1 row)
+

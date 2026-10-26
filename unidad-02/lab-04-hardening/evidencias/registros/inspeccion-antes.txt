@@ -1,0 +1,126 @@
+RESET
+                                                       version                                                        
+----------------------------------------------------------------------------------------------------------------------
+ PostgreSQL 17.11 (Debian 17.11-1.pgdg13+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+(1 row)
+
+ port 
+------
+ 5432
+(1 row)
+
+ listen_addresses 
+------------------
+ *
+(1 row)
+
+ ssl 
+-----
+ on
+(1 row)
+
+ password_encryption 
+---------------------
+ scram-sha-256
+(1 row)
+
+ pid  |  usename   |  datname  | client_addr | client_port |     application_name     
+------+------------+-----------+-------------+-------------+--------------------------
+   27 |            |           |             |             | 
+   28 |            |           |             |             | 
+   30 |            |           |             |             | 
+   31 |            |           |             |             | 
+   32 | estudiante |           |             |             | 
+   82 | estudiante | practicas | 172.20.0.3  |       57292 | pgAdmin 4 - DB:practicas
+   92 | estudiante | practicas | 172.20.0.3  |       57298 | pgAdmin 4 - CONN:3051681
+ 3111 | estudiante | practicas | 172.20.0.3  |       37436 | pgAdmin 4 - CONN:3051681
+ 6341 | estudiante | practicas |             |          -1 | psql
+(9 rows)
+
+               config_file                
+------------------------------------------
+ /var/lib/postgresql/data/postgresql.conf
+(1 row)
+
+               hba_file               
+--------------------------------------
+ /var/lib/postgresql/data/pg_hba.conf
+(1 row)
+
+               ident_file               
+----------------------------------------
+ /var/lib/postgresql/data/pg_ident.conf
+(1 row)
+
+      data_directory      
+--------------------------
+ /var/lib/postgresql/data
+(1 row)
+
+ log_directory 
+---------------
+ log
+(1 row)
+
+ logging_collector 
+-------------------
+ off
+(1 row)
+
+ log_connections 
+-----------------
+ off
+(1 row)
+
+ log_disconnections 
+--------------------
+ off
+(1 row)
+
+ line_number | type  |   database    | user_name |  address  |                 netmask                 |  auth_method  | error 
+-------------+-------+---------------+-----------+-----------+-----------------------------------------+---------------+-------
+         117 | local | {all}         | {all}     |           |                                         | trust         | 
+         119 | host  | {all}         | {all}     | 127.0.0.1 | 255.255.255.255                         | trust         | 
+         121 | host  | {all}         | {all}     | ::1       | ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff | trust         | 
+         124 | local | {replication} | {all}     |           |                                         | trust         | 
+         125 | host  | {replication} | {all}     | 127.0.0.1 | 255.255.255.255                         | trust         | 
+         126 | host  | {replication} | {all}     | ::1       | ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff | trust         | 
+         128 | host  | {all}         | {all}     | all       |                                         | scram-sha-256 | 
+(7 rows)
+
+ extname  | extversion 
+----------+------------
+ pgcrypto | 1.3
+ plpgsql  | 1.0
+(2 rows)
+
+ max_connections 
+-----------------
+ 100
+(1 row)
+
+ superuser_reserved_connections 
+--------------------------------
+ 3
+(1 row)
+
+ statement_timeout 
+-------------------
+ 0
+(1 row)
+
+ idle_in_transaction_session_timeout 
+-------------------------------------
+ 0
+(1 row)
+
+ ssl_min_protocol_version 
+--------------------------
+ TLSv1.2
+(1 row)
+
+ pid  |  usename   | client_addr | ssl | version | cipher 
+------+------------+-------------+-----+---------+--------
+ 6341 | estudiante |             | f   |         | 
+(1 row)
+

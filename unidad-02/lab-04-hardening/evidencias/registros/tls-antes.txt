@@ -1,0 +1,6 @@
+usename   |  datname  | client_addr |     application_name     | ssl | version 
+------------+-----------+-------------+--------------------------+-----+---------
+ estudiante | practicas | 172.20.0.3  | pgAdmin 4 - DB:practicas | t   | TLSv1.3
+ estudiante | practicas | 172.20.0.3  | pgAdmin 4 - CONN:3051681 | t   | TLSv1.3
+ estudiante | practicas | 172.20.0.3  | pgAdmin 4 - CONN:3051681 | t   | TLSv1.3
+(3 rows)

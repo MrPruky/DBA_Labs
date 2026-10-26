@@ -1,0 +1,54 @@
+RESET
+                name                 |      setting       | unit | pending_restart 
+-------------------------------------+--------------------+------+-----------------
+ idle_in_transaction_session_timeout | 300000             | ms   | f
+ listen_addresses                    | localhost,postgres |      | f
+ log_connections                     | on                 |      | f
+ log_disconnections                  | on                 |      | f
+ max_connections                     | 100                |      | f
+ password_encryption                 | scram-sha-256      |      | f
+ port                                | 5432               |      | f
+ ssl                                 | on                 |      | f
+ ssl_min_protocol_version            | TLSv1.2            |      | f
+ statement_timeout                   | 0                  | ms   | f
+ superuser_reserved_connections      | 3                  |      | f
+(11 rows)
+
+ line_number |   type    |  database   |  user_name   |  address   |                 netmask                 |  auth_method  | error 
+-------------+-----------+-------------+--------------+------------+-----------------------------------------+---------------+-------
+           3 | local     | {all}       | {estudiante} |            |                                         | peer          | 
+           4 | local     | {all}       | {all}        |            |                                         | reject        | 
+           7 | hostnossl | {all}       | {all}        | 0.0.0.0    | 0.0.0.0                                 | reject        | 
+           8 | hostnossl | {all}       | {all}        | ::         | ::                                      | reject        | 
+          11 | hostssl   | {practicas} | {estudiante} | 172.20.0.3 | 255.255.255.255                         | scram-sha-256 | 
+          14 | hostssl   | {practicas} | {estudiante} | 127.0.0.1  | 255.255.255.255                         | scram-sha-256 | 
+          15 | hostssl   | {practicas} | {estudiante} | ::1        | ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff | scram-sha-256 | 
+          18 | host      | {all}       | {all}        | 0.0.0.0    | 0.0.0.0                                 | reject        | 
+          19 | host      | {all}       | {all}        | ::         | ::                                      | reject        | 
+(9 rows)
+
+ errores_hba 
+-------------
+           0
+(1 row)
+
+ pid |  usename   | client_addr | ssl | version | cipher 
+-----+------------+-------------+-----+---------+--------
+ 125 | estudiante |             | f   |         | 
+(1 row)
+
+ pid | usename | datname | client_addr | application_name | ssl | version | cipher 
+-----+---------+---------+-------------+------------------+-----+---------+--------
+(0 rows)
+
+ extname  | extversion 
+----------+------------
+ pgcrypto | 1.3
+ plpgsql  | 1.0
+(2 rows)
+
+ clientes 
+----------
+        5
+(1 row)
+

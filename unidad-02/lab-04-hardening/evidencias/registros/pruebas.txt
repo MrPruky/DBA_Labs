@@ -1,0 +1,42 @@
+TCP local con SCRAM y TLS
+ current_user | current_database | ssl | version |         cipher         
+--------------+------------------+-----+---------+------------------------
+ estudiante   | practicas        | t   | TLSv1.3 | TLS_AES_256_GCM_SHA384
+(1 row)
+
+
+
+Contrasenia incorrecta
+psql: error: connection to server at "127.0.0.1", port 5432 failed: FATAL:  password authentication failed for user "estudiante"
+
+
+TCP sin TLS
+psql: error: connection to server at "127.0.0.1", port 5432 failed: FATAL:  pg_hba.conf rejects connection for host "127.0.0.1", user "estudiante", database "practicas", no encryption
+
+
+Base template1 no autorizada por TCP
+psql: error: connection to server at "127.0.0.1", port 5432 failed: FATAL:  pg_hba.conf rejects connection for host "127.0.0.1", user "estudiante", database "template1", SSL encryption
+
+
+Usuario no autorizado por TCP
+psql: error: connection to server at "127.0.0.1", port 5432 failed: FATAL:  pg_hba.conf rejects connection for host "127.0.0.1", user "no_autorizado_lab04", database "practicas", SSL encryption
+
+
+Origen distinto de pgAdmin y loopback
+psql: error: connection to server at "172.20.0.2", port 5432 failed: FATAL:  pg_hba.conf rejects connection for host "172.20.0.2", user "estudiante", database "practicas", SSL encryption
+
+
+Socket como usuario SO root solicitando estudiante
+psql: error: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  Peer authentication failed for user "estudiante"
+
+
+Socket como usuario SO postgres solicitando estudiante
+ current_user 
+--------------
+ estudiante
+(1 row)
+
+
+
+Cliente desde el contenedor pgAdmin con TLS
+["estudiante", "172.20.0.3/32", true, "TLSv1.3", "TLS_AES_256_GCM_SHA384"]
