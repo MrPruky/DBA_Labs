@@ -1,0 +1,77 @@
+2026-11-27 05:19:13.909 UTC [1] user= db= app= client= LOG:  starting PostgreSQL 16.15 (Debian 16.15-1.pgdg13+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+2026-11-27 05:19:13.910 UTC [1] user= db= app= client= LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2026-11-27 05:19:13.911 UTC [1] user= db= app= client= LOG:  listening on IPv6 address "::", port 5432
+2026-11-27 05:19:13.918 UTC [1] user= db= app= client= LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2026-11-27 05:19:13.929 UTC [30] user= db= app= client= LOG:  database system was interrupted; last known up at 2026-11-09 01:26:43 UTC
+2026-11-27 05:19:14.286 UTC [30] user= db= app= client= LOG:  database system was not properly shut down; automatic recovery in progress
+2026-11-27 05:19:14.292 UTC [30] user= db= app= client= LOG:  redo starts at 0/19C7BC8
+2026-11-27 05:19:14.292 UTC [30] user= db= app= client= LOG:  invalid record length at 0/19C7CB0: expected at least 24, got 0
+2026-11-27 05:19:14.292 UTC [30] user= db= app= client= LOG:  redo done at 0/19C7C78 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2026-11-27 05:19:14.299 UTC [28] user= db= app= client= LOG:  checkpoint starting: end-of-recovery immediate wait
+2026-11-27 05:19:14.317 UTC [28] user= db= app= client= LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.005 s, sync=0.003 s, total=0.020 s; sync files=2, longest=0.002 s, average=0.002 s; distance=0 kB, estimate=0 kB; lsn=0/19C7CB0, redo lsn=0/19C7CB0
+2026-11-27 05:19:14.332 UTC [1] user= db= app= client= LOG:  database system is ready to accept connections
+2026-11-27 05:19:20.195 UTC [40] user=[unknown] db=[unknown] app=[unknown] client=[local] LOG:  connection received: host=[local]
+2026-11-27 05:19:20.197 UTC [40] user=postgres db=comercial app=[unknown] client=[local] LOG:  connection authorized: user=postgres database=comercial application_name=psql
+2026-11-27 05:19:20.254 UTC [40] user=postgres db=comercial app=psql client=[local] LOG:  disconnection: session time: 0:00:00.059 user=postgres database=comercial host=[local]
+2026-11-27 05:19:28.159 UTC [47] user=[unknown] db=[unknown] app=[unknown] client=[local] LOG:  connection received: host=[local]
+2026-11-27 05:19:28.166 UTC [47] user=postgres db=comercial app=[unknown] client=[local] LOG:  connection authorized: user=postgres database=comercial application_name=psql
+2026-11-27 05:19:28.177 UTC [47] user=postgres db=comercial app=psql client=[local] LOG:  disconnection: session time: 0:00:00.018 user=postgres database=comercial host=[local]
+2026-11-27 05:20:04.251 UTC [54] user=[unknown] db=[unknown] app=[unknown] client=[local] LOG:  connection received: host=[local]
+2026-11-27 05:20:04.252 UTC [54] user=postgres db=comercial app=[unknown] client=[local] LOG:  connection authorized: user=postgres database=comercial application_name=psql
+2026-11-27 05:20:04.264 UTC [54] user=postgres db=comercial app=psql client=[local] LOG:  disconnection: session time: 0:00:00.013 user=postgres database=comercial host=[local]
+2026-11-27 05:20:04.513 UTC [62] user=[unknown] db=[unknown] app=[unknown] client=[local] LOG:  connection received: host=[local]
+2026-11-27 05:20:04.514 UTC [62] user=postgres db=comercial app=[unknown] client=[local] LOG:  connection authorized: user=postgres database=comercial application_name=psql
+2026-11-27 05:20:04.516 UTC [62] user=postgres db=comercial app=psql client=[local] LOG:  statement: INSERT INTO clientes (nombre, correo, telefono, rfc, edad, ciudad, codigo_postal) VALUES
+	('Ana Lopez', 'ANA.LOPEZ@example.test', '6671234567', 'LOAA850315AB', 41, 'Culiacan', '80000'),
+	('Jorge Díaz', 'sin-correo', '667', NULL, -3, 'Culiacán', '8000');
+2026-11-27 05:20:04.538 UTC [62] user=postgres db=comercial app=psql client=[local] LOG:  disconnection: session time: 0:00:00.025 user=postgres database=comercial host=[local]
+2026-11-27 05:20:04.821 UTC [69] user=[unknown] db=[unknown] app=[unknown] client=[local] LOG:  connection received: host=[local]
+2026-11-27 05:20:04.822 UTC [69] user=postgres db=comercial app=[unknown] client=[local] LOG:  connection authorized: user=postgres database=comercial application_name=psql
+2026-11-27 05:20:04.824 UTC [69] user=postgres db=comercial app=psql client=[local] LOG:  statement: COMMENT ON TABLE clientes IS 'Clientes de Comercializadora Norte. Propietario propuesto: Gerencia Comercial. Custodio: DBA. Clasificacion: confidencial.';
+2026-11-27 05:20:04.831 UTC [69] user=postgres db=comercial app=psql client=[local] LOG:  statement: COMMENT ON COLUMN clientes.id IS 'Identificador interno del cliente. Generado por el sistema.';
+2026-11-27 05:20:04.834 UTC [69] user=postgres db=comercial app=psql client=[local] LOG:  statement: COMMENT ON COLUMN clientes.nombre IS 'Nombre completo. Dato personal identificador.';
+2026-11-27 05:20:04.835 UTC [69] user=postgres db=comercial app=psql client=[local] LOG:  statement: COMMENT ON COLUMN clientes.correo IS 'Correo de contacto. Dato personal para notificaciones.';
+2026-11-27 05:20:04.836 UTC [69] user=postgres db=comercial app=psql client=[local] LOG:  statement: COMMENT ON COLUMN clientes.telefono IS 'Telefono de contacto del cliente. Dato personal.';
+2026-11-27 05:20:04.838 UTC [69] user=postgres db=comercial app=psql client=[local] LOG:  statement: COMMENT ON COLUMN clientes.rfc IS 'RFC del cliente. Dato personal para facturacion. Cambios auditados en auditoria.cambios_clientes.';
+2026-11-27 05:20:04.839 UTC [69] user=postgres db=comercial app=psql client=[local] LOG:  statement: COMMENT ON COLUMN clientes.edad IS 'Edad en años cumplidos. Dato personal para analitica.';
+2026-11-27 05:20:04.840 UTC [69] user=postgres db=comercial app=psql client=[local] LOG:  statement: COMMENT ON COLUMN clientes.ciudad IS 'Ciudad del cliente. Se usa para atencion y conteos.';
+2026-11-27 05:20:04.842 UTC [69] user=postgres db=comercial app=psql client=[local] LOG:  statement: COMMENT ON COLUMN clientes.codigo_postal IS 'Codigo postal del cliente. Se usa para facturacion y conteos.';
+2026-11-27 05:20:04.843 UTC [69] user=postgres db=comercial app=psql client=[local] LOG:  statement: COMMENT ON COLUMN clientes.fecha_alta IS 'Fecha en que se registro el cliente.';
+2026-11-27 05:20:04.845 UTC [69] user=postgres db=comercial app=psql client=[local] LOG:  statement: COMMENT ON COLUMN clientes.segmento IS 'Segmento asignado al cliente.';
+2026-11-27 05:20:04.877 UTC [69] user=postgres db=comercial app=psql client=[local] LOG:  disconnection: session time: 0:00:00.056 user=postgres database=comercial host=[local]
+2026-11-27 05:20:05.177 UTC [76] user=[unknown] db=[unknown] app=[unknown] client=[local] LOG:  connection received: host=[local]
+2026-11-27 05:20:05.178 UTC [76] user=postgres db=comercial app=[unknown] client=[local] LOG:  connection authorized: user=postgres database=comercial application_name=psql
+2026-11-27 05:20:05.336 UTC [76] user=postgres db=comercial app=psql client=[local] LOG:  disconnection: session time: 0:00:00.160 user=postgres database=comercial host=[local]
+2026-11-27 05:20:05.595 UTC [84] user=[unknown] db=[unknown] app=[unknown] client=[local] LOG:  connection received: host=[local]
+2026-11-27 05:20:05.596 UTC [84] user=postgres db=comercial app=[unknown] client=[local] LOG:  connection authorized: user=postgres database=comercial application_name=psql
+2026-11-27 05:20:05.600 UTC [84] user=postgres db=comercial app=psql client=[local] LOG:  statement: CREATE SCHEMA gobierno;
+2026-11-27 05:20:05.606 UTC [84] user=postgres db=comercial app=psql client=[local] LOG:  statement: REVOKE ALL ON SCHEMA gobierno FROM PUBLIC;
+2026-11-27 05:20:05.607 UTC [84] user=postgres db=comercial app=psql client=[local] LOG:  statement: CREATE TABLE gobierno.solicitudes_cambio (
+	 folio TEXT PRIMARY KEY, descripcion TEXT NOT NULL, solicitado_por TEXT NOT NULL, aprobado_por TEXT,
+	 ambiente TEXT NOT NULL CHECK (ambiente IN ('desarrollo','pruebas','produccion')),
+	 fecha_aprobacion TIMESTAMPTZ, ventana_inicio TIMESTAMPTZ, ventana_fin TIMESTAMPTZ
+	);
+2026-11-27 05:20:05.624 UTC [84] user=postgres db=comercial app=psql client=[local] LOG:  statement: COMMENT ON TABLE gobierno.solicitudes_cambio IS 'Registro de solicitudes de cambio de ejemplo en comercial. Propietario propuesto: Comite de cambios. Custodio: DBA.';
+2026-11-27 05:20:05.626 UTC [84] user=postgres db=comercial app=psql client=[local] LOG:  statement: INSERT INTO gobierno.solicitudes_cambio VALUES
+	('CAM-2026-014','Agregar columna canal_alta a clientes','Gerencia Comercial','Comite de cambios','produccion',now()-interval '1 day',now()-interval '5 minutes',now()+interval '1 hour');
+2026-11-27 05:20:05.627 UTC [84] user=postgres db=comercial app=psql client=[local] LOG:  statement: ALTER TABLE clientes ADD COLUMN canal_alta VARCHAR(20);
+2026-11-27 05:20:05.629 UTC [84] user=postgres db=comercial app=psql client=[local] LOG:  statement: COMMENT ON COLUMN clientes.canal_alta IS 'Canal por el que se registro el cliente. Cambio de ejemplo CAM-2026-014.';
+2026-11-27 05:20:05.632 UTC [84] user=postgres db=comercial app=psql client=[local] LOG:  disconnection: session time: 0:00:00.037 user=postgres database=comercial host=[local]
+2026-11-27 05:20:05.863 UTC [91] user=[unknown] db=[unknown] app=[unknown] client=[local] LOG:  connection received: host=[local]
+2026-11-27 05:20:05.865 UTC [91] user=postgres db=comercial app=[unknown] client=[local] LOG:  connection authorized: user=postgres database=comercial application_name=psql
+2026-11-27 05:20:05.877 UTC [91] user=postgres db=comercial app=psql client=[local] LOG:  disconnection: session time: 0:00:00.014 user=postgres database=comercial host=[local]
+2026-11-27 05:20:06.163 UTC [98] user=[unknown] db=[unknown] app=[unknown] client=[local] LOG:  connection received: host=[local]
+2026-11-27 05:20:06.165 UTC [98] user=postgres db=comercial app=[unknown] client=[local] LOG:  connection authorized: user=postgres database=comercial application_name=psql
+2026-11-27 05:20:06.173 UTC [98] user=postgres db=comercial app=psql client=[local] LOG:  disconnection: session time: 0:00:00.010 user=postgres database=comercial host=[local]
+2026-11-27 05:20:06.539 UTC [105] user=[unknown] db=[unknown] app=[unknown] client=[local] LOG:  connection received: host=[local]
+2026-11-27 05:20:06.540 UTC [105] user=postgres db=comercial app=[unknown] client=[local] LOG:  connection authorized: user=postgres database=comercial application_name=psql
+2026-11-27 05:20:06.551 UTC [105] user=postgres db=comercial app=psql client=[local] LOG:  disconnection: session time: 0:00:00.012 user=postgres database=comercial host=[local]
+2026-11-27 05:20:06.785 UTC [112] user=[unknown] db=[unknown] app=[unknown] client=[local] LOG:  connection received: host=[local]
+2026-11-27 05:20:06.786 UTC [112] user=postgres db=comercial app=[unknown] client=[local] LOG:  connection authorized: user=postgres database=comercial application_name=psql
+2026-11-27 05:20:06.789 UTC [112] user=postgres db=comercial app=psql client=[local] LOG:  disconnection: session time: 0:00:00.004 user=postgres database=comercial host=[local]
+2026-11-27 05:20:07.005 UTC [119] user=[unknown] db=[unknown] app=[unknown] client=[local] LOG:  connection received: host=[local]
+2026-11-27 05:20:07.006 UTC [119] user=postgres db=comercial app=[unknown] client=[local] LOG:  connection authorized: user=postgres database=comercial application_name=psql
+2026-11-27 05:20:07.009 UTC [119] user=postgres db=comercial app=psql client=[local] LOG:  disconnection: session time: 0:00:00.004 user=postgres database=comercial host=[local]
+2026-11-27 05:20:07.378 UTC [126] user=[unknown] db=[unknown] app=[unknown] client=[local] LOG:  connection received: host=[local]
+2026-11-27 05:20:07.380 UTC [126] user=postgres db=comercial app=[unknown] client=[local] LOG:  connection authorized: user=postgres database=comercial application_name=psql
+

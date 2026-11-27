@@ -1,0 +1,12 @@
+columna,tipo,longitud,acepta_nulos,descripcion
+id,bigint,,NO,Identificador interno del cliente. Generado por el sistema.
+nombre,character varying,120,NO,Nombre completo. Dato personal identificador.
+correo,character varying,150,NO,Correo de contacto. Dato personal para notificaciones.
+telefono,character varying,20,YES,Telefono de contacto del cliente. Dato personal.
+rfc,character varying,13,YES,RFC del cliente. Dato personal para facturacion. Cambios auditados en auditoria.cambios_clientes.
+edad,integer,,YES,Edad en años cumplidos. Dato personal para analitica.
+ciudad,character varying,80,YES,Ciudad del cliente. Se usa para atencion y conteos.
+codigo_postal,character varying,10,YES,Codigo postal del cliente. Se usa para facturacion y conteos.
+fecha_alta,date,,YES,Fecha en que se registro el cliente.
+segmento,character varying,20,YES,Segmento asignado al cliente.
+canal_alta,character varying,20,YES,Canal por el que se registro el cliente. Cambio de ejemplo CAM-2026-014.
